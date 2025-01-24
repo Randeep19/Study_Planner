@@ -1,0 +1,71 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main content (CalendarView and buttons) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="78dp"
+            android:background="#F5F5DC">
+
+            <!-- Title Text for Timetable -->
+            <TextView
+                android:id="@+id/timetable_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timetable"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Calendar View for selecting dates -->
+            <CalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- Go Back Button -->
+            <Button
+                android:id="@+id/go_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Go Back"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- Menu Icon ImageButton (Hamburger Button) -->
+        <ImageButton
+            android:id="@+id/btn_open_drawer"
+            android:layout_width="68dp"
+            android:layout_height="98dp"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="77dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Open Drawer"
+            android:src="@drawable/menu1" />
+    </FrameLayout>
+
+    <!-- Navigation Drawer Menu -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_recycler_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffff"
+        android:layout_marginTop="90dp"
+        android:contentDescription="Navigation Drawer Menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

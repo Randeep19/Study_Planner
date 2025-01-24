@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions for Camera and Storage -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Specify camera feature (optional for devices without cameras) -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.Light"
+        tools:targetApi="31">
+
+        <!-- Activities Registration -->
+        <activity
+            android:name=".activity.CollectionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.BaseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.EditTaskActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.AddTaskActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.ReportActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.TimetableActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.TaskManagerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Activity (not the launcher) -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <!-- No need for MAIN and LAUNCHER intent-filter here -->
+        </activity>
+
+    </application>
+
+</manifest>

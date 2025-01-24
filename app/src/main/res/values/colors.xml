@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="button_background">#8B8B8B</color>  <!-- Darker gray -->
+    <color name="beige_background">#F5F5DC</color>
+    <color name="orange">#FF5722</color>  <!-- Custom orange color -->
+    <color name="white">#FFFFFF</color>    <!-- White color -->
+</resources>

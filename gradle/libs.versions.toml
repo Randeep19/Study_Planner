@@ -1,0 +1,71 @@
+[versions]
+agp = "8.7.3"
+appcompatVersion = "1.7.0"
+drawerlayout = "1.2.0"
+firebaseAuthVersion = "23.1.0"
+firebaseCore = "21.1.1"
+googleApiClientAndroid = "1.32.1"
+googleApiServicesCalendar = "v3-rev305-1.25.0"
+googleHttpClientAndroid = "1.41.0"
+googleHttpClientGson = "1.42.2"
+googleHttpClientGsonVersion = "1.42.2"
+googleMaterial = "1.12.0"
+googleOauthClient = "1.32.1"
+googleServices = "4.4.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+lifecycleLivedataKtx = "2.8.7"
+material = "1.12.0"
+activity = "1.10.0"
+constraintlayout = "2.2.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.1.0"
+materialCalendarview = "2.0.0"
+materialVersion = "1.12.0"
+playServicesAuthVersion = "21.3.0"
+recyclerview = "1.4.0"
+retrofit = "2.9.0"
+roomCompiler = "2.6.1"
+roomCompilerVersion = "2.4.2"
+roomRuntime = "2.4.2"
+
+[libraries]
+appcompat-v140 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+drawerlayout = { module = "androidx.drawerlayout:drawerlayout", version.ref = "drawerlayout" }
+firebase-auth-v2105 = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuthVersion" }
+firebase-core = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCore" }
+gms-play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
+google-api-client-android = { module = "com.google.api-client:google-api-client-android", version.ref = "googleApiClientAndroid" }
+google-api-services-calendar = { module = "com.google.apis:google-api-services-calendar", version.ref = "googleApiServicesCalendar" }
+google-http-client-android = { module = "com.google.http-client:google-http-client-android", version.ref = "googleHttpClientAndroid" }
+google-http-client-gson = { module = "com.google.http-client:google-http-client-gson", version.ref = "googleHttpClientGson" }
+google-http-client-gson-v1410 = { module = "com.google.http-client:google-http-client-gson", version.ref = "googleHttpClientGsonVersion" }
+google-oauth-client = { module = "com.google.oauth-client:google-oauth-client", version.ref = "googleOauthClient" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleLivedataKtx" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarview" }
+material-v150 = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
+material-v160 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+room-compiler-v242 = { module = "androidx.room:room-compiler", version.ref = "roomCompilerVersion" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomCompiler" }
+room-runtime-v242 = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+

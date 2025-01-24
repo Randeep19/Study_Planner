@@ -48,7 +48,7 @@ public class TaskManagerActivity extends AppCompatActivity implements MenuItemAd
         List<MenuItem> menuItems = new ArrayList<>();
         menuItems.add(new MenuItem("Task Manager", R.drawable.taskmanager));
         menuItems.add(new MenuItem("Timetable", R.drawable.timetable));
-        menuItems.add(new MenuItem("Click Notes", R.drawable.report));
+        menuItems.add(new MenuItem("Report", R.drawable.report));
 
         // Find the Menu RecyclerView
         menuRecyclerView = findViewById(R.id.menu_recycler_view);

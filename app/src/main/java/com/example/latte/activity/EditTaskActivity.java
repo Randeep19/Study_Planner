@@ -87,7 +87,18 @@ public class EditTaskActivity extends AppCompatActivity implements MenuItemAdapt
                 // Create the updated TaskModel object
                 TaskModel updatedTask = new TaskModel(updatedTitle, updatedDescription, "2025-01-01", 1, false, taskId);
                 taskViewModel.update(updatedTask);  // Call the ViewModel to update the task
-                finish();  // Close the EditTaskActivity
+
+                // Show a confirmation toast
+                Toast.makeText(EditTaskActivity.this, "Task updated successfully", Toast.LENGTH_SHORT).show();
+
+                // Navigate back to TaskManagerActivity and ensure the task list is refreshed
+                Intent intent = new Intent(EditTaskActivity.this, TaskManagerActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear previous activities to avoid duplicates
+                startActivity(intent);  // Start TaskManagerActivity
+                finish();  // Finish EditTaskActivity
+            } else {
+                // Show error if fields are empty
+                Toast.makeText(EditTaskActivity.this, "Please fill in both fields", Toast.LENGTH_SHORT).show();
             }
         });
 

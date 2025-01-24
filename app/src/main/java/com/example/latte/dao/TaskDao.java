@@ -11,7 +11,6 @@ import com.example.latte.model.TaskModel;
 
 import java.util.List;
 
-
 @Dao
 public interface TaskDao {
 
@@ -19,7 +18,7 @@ public interface TaskDao {
     void insertTask(TaskModel task);
 
     @Update
-    void updateTask(TaskModel task); // Just declare the method, Room will handle the update
+    void updateTask(TaskModel task);
 
     @Delete
     void deleteTask(TaskModel task);
@@ -27,4 +26,3 @@ public interface TaskDao {
     @Query("SELECT * FROM tasks ORDER BY priority ASC")
     LiveData<List<TaskModel>> getAllTasks();
 }
-

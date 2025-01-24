@@ -3,6 +3,7 @@ package com.example.latte.repository;
 import android.content.Context;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 
 import com.example.latte.dao.TaskDao;
@@ -28,21 +29,39 @@ public class TaskRepository {
     }
 
     // Insert a task into the database in a background thread
-    public void insert(TaskModel task) {
-        // Use executor to avoid blocking the main thread
-        TaskDatabase.getDatabaseWriteExecutor().execute(() -> taskDao.insertTask(task));
+    public void insert(@NonNull TaskModel task) {
+        TaskDatabase.getDatabaseWriteExecutor().execute(() -> {
+            try {
+                taskDao.insertTask(task);
+                Log.d("TaskRepository", "Task inserted successfully");
+            } catch (Exception e) {
+                Log.e("TaskRepository", "Error inserting task", e);
+            }
+        });
     }
 
     // Update an existing task in the database in a background thread
-    public void update(TaskModel task) {
-        Log.d("TaskRepository", "Updating task in repository: " + task.toString());  // Log task being updated
-        TaskDatabase.getDatabaseWriteExecutor().execute(() -> taskDao.updateTask(task)); // Update task in the background
+    public void update(@NonNull TaskModel task) {
+        Log.d("TaskRepository", "Updating task in repository: " + task.toString());
+        TaskDatabase.getDatabaseWriteExecutor().execute(() -> {
+            try {
+                taskDao.updateTask(task);
+                Log.d("TaskRepository", "Task updated successfully");
+            } catch (Exception e) {
+                Log.e("TaskRepository", "Error updating task", e);
+            }
+        });
     }
 
-
     // Delete a task from the database in a background thread
-    public void delete(TaskModel task) {
-        // Use executor to avoid blocking the main thread
-        TaskDatabase.getDatabaseWriteExecutor().execute(() -> taskDao.deleteTask(task));
+    public void delete(@NonNull TaskModel task) {
+        TaskDatabase.getDatabaseWriteExecutor().execute(() -> {
+            try {
+                taskDao.deleteTask(task);
+                Log.d("TaskRepository", "Task deleted successfully");
+            } catch (Exception e) {
+                Log.e("TaskRepository", "Error deleting task", e);
+            }
+        });
     }
 }
